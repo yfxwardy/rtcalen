@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RTEagle &amp; Sunburst Calendar</title>
+
+<script src="/js/modernizr-2.6.2.min.js"></script>
+<!-- <script src="js/sunburst.js"></script> -->
+<link rel="stylesheet" href="css/rte.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body onLoad="Calendar.init()">
+
+<div id="container">
+
+	<div id="top">
+		<div class="buttons">
+			<input class="button1" type="button" value="Добавить" id="add">
+			<input class="button1" type="button" value="Обновить" id="refresh">
+		</div>
+		<div class="search">
+			<img src="/i/magnifier16.png">
+			<input class="textsearch" type="search" placeholder=" Событие, дата или участник" size="30">
+		</div>
+		<div id="quickadd" class="popup bottom" style="display: none">
+			<input class="text" type="text" placeholder=" 5 марта, 14:00, День Родждения" size="30">
+			<br>
+			<input class="button3" type="button" value="Создать">
+			<div class="close"> </div>
+		</div>
+	</div><!-- top -->
+	
+	<div id="timedate">
+		<input class="button2 left-arrow" type="button" value=" " onClick="Calendar.changeMonth(-1)">
+		<span class="monthdate">Март 2013</span>
+		<input class="button2 right-arrow" type="button" value=" "  onclick="Calendar.changeMonth(1)">
+		<input id="today" class="button2" type="button" value="Сегодня" onClick="Calendar.setToday()">
+	</div><!-- timedate -->
+	
+	<div id="calendar">
+		<div>
+			<p><span class="daytext">Понедельник</span>, <span class="daynumber">25</span></p>
+		</div>
+		<div>
+			<p><span class="daytext">Вторник</span>, <span class="daynumber">26</span></p>
+		</div>
+		<div>
+			<p><span class="daytext">Среда</span>, <span class="daynumber">27</span></p>
+		</div>
+		<div>
+			<p><span class="daytext">Четверг</span>, <span class="daynumber">28</span></p>
+		</div>
+		<div>
+			<p><span class="daytext">Пятница</span>, <span class="daynumber">1</span></p>
+		</div>
+		<div class="today">
+			<p><span class="daytext">Суббота</span>, <span class="daynumber">2</span></p>
+		</div>
+		<div>
+			<p><span class="daytext">Воскресенье</span>, <span class="daynumber">3</span></p>
+		</div>
+		
+		<!-- new week -->
+		
+		<div>
+			<p><span class="daynumber">4</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">5</span></p>
+		</div>
+		<div class="active">
+			<p><span class="daynumber">6</span></p>
+			
+			<div id="fulladd" class="popup right">
+				<input id="event-name" class="text" type="text" placeholder=" Событие" size="30">
+				<br>
+				<input id="event-date" class="text" type="text" placeholder=" День, месяц, год" size="30">
+				<br>
+				<input id="event-members" class="text" type="text" placeholder=" Имена участников" size="30">
+				<br>
+				<br>
+				<textarea id="event-description" class="text" type="text" placeholder=" Описание" cols="24" rows="8"></textarea>
+				
+				<br>
+				<input class="button3" type="button" value="Готово">
+				<input class="button3" type="button" value="Удалить">
+				<div class="close"> </div>
+			</div>
+		</div>
+			
+		<div>
+			<p><span class="daynumber">7</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">8</span></p>
+		</div>
+		<div class="event">
+			<p><span class="daynumber">9</span></p>
+			<h3>Влюбиться</h3>
+			<p>Витя Костин, Пётр Михайлов.</p>
+		</div>
+		<div>
+			<p><span class="daynumber">10</span></p>
+		</div>
+
+		<!-- new week -->
+		
+		<div>
+			<p><span class="daynumber">11</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">12</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">13</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">14</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">15</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">16</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">17</span></p>
+		</div>
+		
+		<!-- new week -->
+		
+		<div>
+			<p><span class="daynumber">18</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">19</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">20</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">21</span></p>
+		</div>
+		<div class="event">
+			<p><span class="daynumber">22</span></p>
+			<h3>ДР!</h3>
+			<p>Дима Молодцов</p>
+		</div>
+		<div>
+			<p><span class="daynumber">23</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">24</span></p>
+		</div>
+
+		<!-- new week -->
+		
+		<div>
+			<p><span class="daynumber">25</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">26</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">27</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">28</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">29</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">30</span></p>
+		</div>
+		<div>
+			<p><span class="daynumber">31</span></p>
+		</div>
+		
+	</div><!-- calendar -->
+	
+</div><!-- container -->
+
+</body>
+</html>
