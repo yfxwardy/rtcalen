@@ -19,36 +19,56 @@ blockquote,q {quotes:none}
 blockquote:before, blockquote:after,
 q:before,q:after {content:'';content:none}
 table {border-collapse:collapse;border-spacing:0}
-input[type="button"] {cursor:pointer;border-radius:1px;}
+input[type="button"] {cursor:pointer;border-radius:1px;font-family:Arial, sans-serif;}
+input[type=search] {border-radius:2px;-webkit-appearance: none;border:0;box-shadow: inset 0	1px 2px 1px rgba(153,153,153,0.7);padding:5px 10px;}
+input[type=text], textarea[type=text] {border-radius:2px;border:0;box-shadow: inset 0 1px 2px 1px rgba(153,153,153,0.7);padding:5px 10px;font-family:Arial, sans-serif;}
+textarea[type=text] {overflow:auto;}
 
 html, body {width:100%;height:100%}
 body {font-family:Arial, sans-serif;}
 #container {width:1000px;position:relative;margin:auto;min-height:100%;min-width:1000px;}
-#top {height:34px;background:#f4f4f4;padding:60px 35px 20px 35px;border-bottom:1px solid rgba(153,153,153,0.5);box-shadow: 0 4px 3px -2px rgba(153,153,153,0.4);position:relative;}
+#top {height:34px;background:#f4f4f4;padding:60px 41px 20px 35px;border-bottom:1px solid rgba(153,153,153,0.5);box-shadow: 0 4px 3px -2px rgba(153,153,153,0.4);position:relative;}
 .buttons {float:left;width:400px;}
 .search {float:right;width:300px;text-align:right;padding:4px 0;}
 .search img, .search input, #timedate input, #timedate span {vertical-align:middle;}
 #timedate {width:925px;height:18px;margin:12px auto;padding:6px 0;}
 #calendar {width:925px;height:656px;margin:auto;font-size:0;line-height:0;letter-spacing:-1px;color:#777;}
-#calendar p, #calendar h3 {margin:5px 0;line-height:1.1;}
-#calendar > div {width:120px;height:125px;border:1px solid #ddd;display:inline-block;font-size:12px;line-height:1;letter-spacing:normal;vertical-align:top;margin:-1px 0 0 -1px;padding:0 5px 5px 5px;position:relative;}
-.button1 {background-color:#07d;color:#fff;font-weight:700;padding:5px 10px;border:0;box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.4);}
+#calendar p, #calendar h3, #calendar h4 {margin:5px 0;line-height:1.1;}
+#calendar > div {width:120px;height:125px;border:1px solid #ddd;display:inline-block;font-size:12px;line-height:1;letter-spacing:normal;vertical-align:top;margin:-1px 0 0 -1px;padding:0 5px 5px 5px;position:relative;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+#calendar > div.active {border:2px solid #86c9fd;background-color:#e5f1f9;z-index:3;width:118px;height:123px;}
+input.button1 {background-color:#07d;color:#fff;font-weight:700;padding:5px 10px;border:0;box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.4);}
 input.button1:active {background-color:#05a;color:#ccc;box-shadow: inset 0px 1px 1px 1px rgba(0,0,0,0.4);}
-.button2 {background:#fff 50% 50% no-repeat;box-shadow: 0 0 1px 1px rgba(153,153,153,0.4);border:0;}
+input.button2 {background:#fff 50% 50% no-repeat;box-shadow: 0 0 1px 1px rgba(153,153,153,0.4);border:0;}
 input.button2:active {background-color:#eee;}
-.button2.left-arrow {background-image: url(/i/arrow-left.png);}
-.button2.right-arrow {background-image: url(/i/arrow-right.png);}
+input.button2.left-arrow {background-image: url(/i/arrow-left.png);}
+input.button2.right-arrow {background-image: url(/i/arrow-right.png);}
+input.button3 {border-radius:4px;border:1px solid #999;background: #eee;background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#eee));background: -moz-linear-gradient(#fff, #eee);background: -o-linear-gradient(top, #fff, #eee);background: -ms-linear-gradient(top, #fff, #eee);background: linear-gradient(top, #fff, #eee);background: -webkit-linear-gradient(top, #fff, #eee);}
+input.button3:active {border:1px inset #999;}
 .event {background-color:#cef !important;}
 .today {background-color:#f4f4f4;z-index:1;}
 .today p:first-child {font-weight:700;}
-#calendar > div.active {border:2px solid #86c9fd;background-color:#e5f1f9;z-index:3;width:118px;height:123px;}
+input.error {outline: 1px solid #f33;}
+#event-description {width:280px;}
+.monthdate {display:inline-block;width:120px;text-align:center;}
+
+
 h3 {font-weight:700}
 
 
 
+textarea.text {resize:none;}
+
 #quickadd {bottom:-90px;left:435x;}
-#fulladd {right:-280px; top:0;}
-.close {width:6px;height:6px;position:absolute;top:5px;right:5px;background: url(/i/close.png);cursor:pointer;}
+#fulladd {right:-350px; top:1px;}
+.active #fulladd {right:-351px; top:0;}
+.close {width:6px;height:6px;position:absolute;top:5px;right:10px;cursor:pointer;}
 .popup {
     position: absolute;
     max-width: 400px;
